@@ -16,15 +16,14 @@ public class Servlet04Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		UserVo userVo = new UserVo(1, "박명수", "park", "1234", "male");
+		System.out.println("04");
+		
+		UserVo userVo = new UserVo(1, "박명수", "park@gmail.com", "1234", "male");
 		request.setAttribute("userVo", userVo);
 		
 		
 		request.setAttribute("num", 1);
 		request.setAttribute("str", "안녕하세요");
-		
-		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/04.jsp");
 		rd.forward(request, response);

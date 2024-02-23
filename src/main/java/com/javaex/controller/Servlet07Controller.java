@@ -14,6 +14,7 @@ public class Servlet07Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("07");
 		//변수의 범위 jsp에서 설명
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/07.jsp");

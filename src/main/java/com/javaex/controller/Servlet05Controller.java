@@ -17,10 +17,10 @@ public class Servlet05Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("05");
 		//문제 5번 6번 예제
 		
-		UserVo userVo = new UserVo(1, "박명수", "park", "1234", "male");
+		UserVo userVo = new UserVo(1, "박명수", "park@gmail.com", "1234", "male");
 		
 		HttpSession session = request.getSession(true);
 		session.setAttribute("authUser", userVo);
