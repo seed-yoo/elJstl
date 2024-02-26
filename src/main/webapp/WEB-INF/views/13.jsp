@@ -126,8 +126,56 @@
 		</tbody>
 	</table>
 	
+	<br>
+	---------------------------------------------------------------------
+	<br>
 	
+	<h4>jstl for문(begin end)</h4>
 	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>이메일</th>
+				<th>패스워드</th>
+				<th>성별</th>
+				<th>status.index</th>
+				<th>status.count</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		
+			<c:forEach items="${ requestScope.userList }" var="userVo" begin="0" end="20" step="1" varStatus="status">
+			
+				<tr>
+					<td>${ userVo.no }</td>
+					<td>${ userVo.name }</td>
+					<td>${ userVo.email }</td>
+					<td>${ userVo.password }</td>
+					<td>${ userVo.gender }</td>
+					<td>${ status.index }</td>
+					<td>${ status.count }</td>
+				</tr>
+				
+			</c:forEach>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		</tbody>
+	</table>
 	
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
